@@ -15,4 +15,5 @@ import com.dog.SpringReadWrite.entity.Account;
  */
 public interface BaseService {
 	public List findAccountList();
+	public void saveAccount();
 }

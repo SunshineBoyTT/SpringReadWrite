@@ -25,6 +25,7 @@ public class DynamicDataSource extends AbstractRoutingDataSource {
 	protected Object determineCurrentLookupKey() {
 		// TODO Auto-generated method stub
 		//使用DynamicDataSourceHolder保证线程安全，并且得到当前数据中的数据源key
+		System.err.println(DynamicDataSourceHolder.getDataSourceKey());
 		return DynamicDataSourceHolder.getDataSourceKey();
 	}
 

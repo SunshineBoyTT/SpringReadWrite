@@ -48,7 +48,7 @@
 	<aop:config>
 		<!-- 定义切面，所有的service的所有方法 -->
 		<aop:pointcut id="txPointcut"
-			expression="execution(* xx.xxx.xxxxxxx.service.*.*(..))" />
+			expression="execution(* com.dog.SpringReadWrite.service.*.*(..))" />
 		<!-- 应用事务策略到Service切面 -->
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut" />
 

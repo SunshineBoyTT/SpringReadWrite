@@ -46,5 +46,16 @@ public class BaseServiceImpl extends JdbcDaoSupport implements BaseService {
 		// TODO Auto-generated constructor stub
 		this.setJdbcTemplate(jdbcTemplate);
 	}
+
+	/* (non-Javadoc)
+	 * @see com.dog.SpringReadWrite.service.BaseService#saveAccount(com.dog.SpringReadWrite.entity.Account)
+	 */
+	@Override
+	public void saveAccount() {
+		// TODO Auto-generated method stub
+		StringBuffer sql=new StringBuffer();
+		sql.append("insert into account values(null,100,10000)");
+		this.getJdbcTemplate().update(sql.toString());
+	}
 	
 }
